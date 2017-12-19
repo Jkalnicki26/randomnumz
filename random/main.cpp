@@ -7,9 +7,39 @@
 //
 
 #include <iostream>
+#include <string>
+using namespace std;
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+string random(string x, string y)
+{
+    int xnum = rand();
+    int ynum = rand();
+    string winner;
+    if(xnum > ynum)
+    {
+        winner = x;
+    }
+    if(ynum > xnum)
+    {
+        winner = y;
+    }
+    if(xnum == ynum)
+    {
+        winner = "Tie";
+    }
+    return winner;
+    
+}
+
+
+int main() {
+    
+    cout << random("p1", "p2") << " has won!\n";
+    cout << random("p1", "p2") << " has won!\n";
+    cout << random("p1", "p2") << " has won!\n";
+    cout << random("p1", "p2") << " has won!\n";
+    cout << random("p1", "p2") << " has won!\n";
+
+    
     return 0;
 }
